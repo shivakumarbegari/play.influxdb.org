@@ -1,0 +1,31 @@
+.row
+  .twelve.columns
+    h1 InfluxDB Playground
+    h5 To get started, either create a new account or log in with an existing account.
+    hr
+
+.row
+  .six.columns
+    h3 New account
+    = simple_form_for :database, url: databases_path do |f|
+      ul
+        li.field
+          = f.input_field :name, class: "input wide", placeholder: "Database name"
+        li.field
+          = f.input_field :username, class: "input narrow", placeholder: "Username"
+        li.field
+          = f.input_field :password, class: "input narrow", placeholder: "Password"
+        div.medium.primary.btn
+          = f.submit "Create"
+
+  .six.columns
+    h3 Existing account
+    ul
+      li.field
+        input.input.wide type="text" placeholder="Database name"
+      li.field
+        input.input.narrow type="text" placeholder="Username"
+      li.field
+        input.input.narrow type="password" placeholder="Password"
+      div.medium.primary.btn
+        a href="#" Log In
