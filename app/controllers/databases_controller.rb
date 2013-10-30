@@ -9,5 +9,7 @@ class DatabasesController < ApplicationController
 
     @influxdb = InfluxDB::Client.new("sandbox.influxdb.org", 9061, "root", "root", nil)
     @influxdb.create_database_user(database, username, password)
+
+    redirect_to "http://sandbox.influxdb.org:9062/#/?username=#{username}&password=#{password}&database=#{database}"
   end
 end
