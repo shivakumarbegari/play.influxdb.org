@@ -77,4 +77,9 @@ Play::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  INFLUXDB_HOST = "sandbox.influxdb.org"
+  INFLUXDB_PORT = 9061
+  INFLUXDB_USERNAME = "root"
+  INFLUXDB_PASSWORD = ENV["INFLUXDB_ROOT_PASSWORD"]
 end

@@ -26,4 +26,9 @@ Play::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  INFLUXDB_HOST = "localhost"
+  INFLUXDB_PORT = 8086
+  INFLUXDB_USERNAME = "root"
+  INFLUXDB_PASSWORD = "root"
 end

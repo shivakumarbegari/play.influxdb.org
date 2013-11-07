@@ -7,6 +7,8 @@
 .row
   .six.columns
     h3 New account?
+    - if flash[:error]
+      .danger.alert= flash[:error]
     = simple_form_for :database, url: databases_path do |f|
       ul
         li.field
