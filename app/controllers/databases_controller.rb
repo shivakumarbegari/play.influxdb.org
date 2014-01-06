@@ -9,12 +9,10 @@ class DatabasesController < ApplicationController
     password = params[:database][:password]
     database = params[:database][:name]
 
-    @influxdb = InfluxDB::Client.new(
-      INFLUXDB_HOST,
-      INFLUXDB_PORT,
-      INFLUXDB_USERNAME,
-      INFLUXDB_PASSWORD
-    )
+    @influxdb = InfluxDB::Client.new host: INFLUXDB_HOST,
+                                     port: INFLUXDB_PORT,
+                                     username: INFLUXDB_USERNAME,
+                                     password: INFLUXDB_PASSWORD
 
     if username.blank? || password.blank? || database.blank?
       flash[:error] = "All fields are required."
