@@ -19,7 +19,7 @@ class DatabasesController < ApplicationController
       render "new" and return
     end
 
-    databases = JSON.parse(@influxdb.get_database_list.body)
+    databases = @influxdb.get_database_list
 
     if databases.any? {|d| d["name"] == database}
       flash[:error] = "Database '#{database}' already exists."
