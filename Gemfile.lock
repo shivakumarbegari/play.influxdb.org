@@ -61,7 +61,7 @@ GEM
       rake
     hike (1.2.3)
     i18n (0.6.5)
-    influxdb (0.0.3)
+    influxdb (0.0.14)
       json
     jbuilder (1.5.2)
       activesupport (>= 3.0.0)
