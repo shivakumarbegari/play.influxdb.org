@@ -13,6 +13,7 @@ gem "jquery-rails"
 gem "turbolinks"
 gem "jbuilder", "~> 1.2"
 gem "heroku"
+gem "honeybadger"
 
 gem "influxdb"
 

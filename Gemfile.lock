@@ -60,6 +60,8 @@ GEM
       json
       rake
     hike (1.2.3)
+    honeybadger (1.10.1)
+      json
     i18n (0.6.5)
     influxdb (0.0.14)
       json
@@ -153,6 +155,7 @@ DEPENDENCIES
   compass-rails (~> 1.0.0)
   heroku
   heroku_san
+  honeybadger
   influxdb
   jbuilder (~> 1.2)
   jquery-rails
