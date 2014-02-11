@@ -16,6 +16,7 @@ gem "heroku"
 gem "honeybadger"
 
 gem "influxdb"
+gem "influxdb-rails"
 
 gem "heroku_san", group: :development
 gem "rails_12factor", group: :production
