@@ -65,7 +65,7 @@ GEM
     i18n (0.6.9)
     influxdb (0.0.16)
       json
-    influxdb-rails (0.1.1)
+    influxdb-rails (0.1.3)
       influxdb
       railties
     jbuilder (1.5.2)
