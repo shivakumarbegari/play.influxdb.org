@@ -26,6 +26,7 @@ class DatabasesController < ApplicationController
       render "new" and return
     end
 
+    @influxdb.create_database(database)
     @influxdb.create_database_user(database, username, password)
 
     redirect_to "http://sandbox.influxdb.com:8083/?username=#{username}&database=#{database}"
