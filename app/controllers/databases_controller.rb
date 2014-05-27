@@ -19,7 +19,7 @@ class DatabasesController < ApplicationController
       render "new" and return
     end
 
-    if password.length < 3 || password.length > 36
+    if password.length < 4 || password.length > 36
       flash[:error] = "Passwords must be at least 4 characters long."
       render "new" and return
     end
