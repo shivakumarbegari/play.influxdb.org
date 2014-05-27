@@ -19,6 +19,11 @@ class DatabasesController < ApplicationController
       render "new" and return
     end
 
+    if password.length < 3 || password.length > 36
+      flash[:error] = "Passwords must be at least 4 characters long."
+      render "new" and return
+    end
+
     databases = @influxdb.get_database_list
 
     if databases.any? {|d| d["name"] == database}
